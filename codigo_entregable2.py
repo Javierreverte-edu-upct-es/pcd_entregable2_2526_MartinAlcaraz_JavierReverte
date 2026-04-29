@@ -83,3 +83,39 @@ class Recomendador:
         cancion=self.catalogo.buscar_cancion_por_id(id_cancion)
         self.sesion.append(cancion)
         print(f"Escuchando: {cancion.titulo}")
+
+# R2 CHAIN OF RESPONSIBILITY
+class Handler:
+    def __init__(self,sucesor=None):
+        self.sucesor=sucesor
+    def manejar(self,sesion):
+        pass
+    def pasar(self,sesion):
+        if self.sucesor:
+            self.sucesor.manejar(sesion)
+
+class EstadisticoSonoro(Handler):
+    def manejar(self,sesion):
+        sonoros=list(map(lambda c:c.atributos_sonoros,sesion))
+        if sonoros:
+            medias={k:functools.reduce(lambda a,b:a+b,map(lambda d:d[k],sonoros))/len(sonoros) for k in sonoros[0]}
+            desviaciones={
+                k:(sum(map(lambda x:(x-medias[k])**2,map(lambda d:d[k],sonoros)))/len(sonoros))**0.5
+                for k in sonoros[0]
+            }
+            print("Media atributos sonoros:",medias)
+            print("Desviación típica atributos sonoros:",desviaciones)
+        self.pasar(sesion)
+
+class EstadisticoSentimental(Handler):
+    def manejar(self,sesion):
+        sentimentales=list(map(lambda c:c.atributos_sentimentales,sesion))
+        if sentimentales:
+            medias={k:functools.reduce(lambda a,b:a+b,map(lambda d:d[k],sentimentales))/len(sentimentales) for k in sentimentales[0]}
+            desviaciones={
+                k:(sum(map(lambda x:(x-medias[k])**2,map(lambda d:d[k],sentimentales)))/len(sentimentales))**0.5
+                for k in sentimentales[0]
+            }
+            print("Media atributos sentimentales:",medias)
+            print("Desviación típica atributos sentimentales:",desviaciones)
+        self.pasar(sesion)
