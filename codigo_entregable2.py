@@ -67,3 +67,19 @@ def generar_catalogo(n):
         sonoros,sentimentales=generar_atributos_aleatorios()
         canciones.append(Cancion(i,f"Cancion_{i}",datetime.datetime.now(),sonoros,sentimentales))
     return Catalogo(canciones,[],[])
+
+# R1 SINGLETON -> Solo debe haber un único objeto recomendador.
+class Recomendador:
+    _instancia=None
+    @classmethod
+    def obtenerRecomendador(cls,catalogo):
+        if not cls._instancia:
+            cls._instancia=cls(catalogo)
+        return cls._instancia
+    def __init__(self,catalogo):
+        self.catalogo=catalogo
+        self.sesion=[]
+    def registrar_escucha(self,id_cancion):  #Cada vez que el usuario escucha una canción se actualiza la sesión.
+        cancion=self.catalogo.buscar_cancion_por_id(id_cancion)
+        self.sesion.append(cancion)
+        print(f"Escuchando: {cancion.titulo}")
