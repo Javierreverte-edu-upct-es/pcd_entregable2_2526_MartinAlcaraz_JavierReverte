@@ -158,3 +158,15 @@ class DecoratorPlaylist(DecoratorRecomendacion):
     def recomendar(self):
         super().recomendar()
         print("Recomendando playlists")
+
+# EJECUCIÓN
+if __name__=="__main__":
+    catalogo=generar_catalogo(10)
+    recomendador=Recomendador.obtenerRecomendador(catalogo) # Crear recomendador (Singleton)
+    recomendador.registrar_escucha(1)
+    recomendador.registrar_escucha(2)
+    recomendador.registrar_escucha(3)
+    cadena=EstadisticoSonoro(sucesor=EstadisticoSentimental()) # Calcular estadísticos de la sesión (R2)
+    cadena.manejar(recomendador.sesion)
+    recomendacion=DecoratorPlaylist(DecoratorArtista(RecomendacionBase())) #Añadir decoradores según preferencias del usuario (R3)
+    recomendacion.recomendar()
