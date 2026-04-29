@@ -137,3 +137,24 @@ class BusquedaTemporal(EstrategiaBusqueda):
 class BusquedaAleatoria(EstrategiaBusqueda):
     def buscar(self,items):
         return random.sample(items,len(items))
+    
+# R3 DECORATOR (Por defecto se recomiendan canciones pero el usuario puede pedir artistas o playlists)
+class RecomendacionBase:
+    def recomendar(self):
+        print("Recomendando canciones")
+
+class DecoratorRecomendacion:
+    def __init__(self,recomendacion):
+        self.recomendacion=recomendacion
+    def recomendar(self):
+        self.recomendacion.recomendar()
+
+class DecoratorArtista(DecoratorRecomendacion):
+    def recomendar(self):
+        super().recomendar()
+        print("Recomendando artistas")
+
+class DecoratorPlaylist(DecoratorRecomendacion):
+    def recomendar(self):
+        super().recomendar()
+        print("Recomendando playlists")
