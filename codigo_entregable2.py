@@ -119,3 +119,21 @@ class EstadisticoSentimental(Handler):
             print("Media atributos sentimentales:",medias)
             print("Desviación típica atributos sentimentales:",desviaciones)
         self.pasar(sesion)
+
+# R4 STRATEGY (Buscar desde el más reciente al más antiguo)
+class EstrategiaBusqueda(metaclass=ABCMeta):
+    @abstractmethod
+    def buscar(self,items):
+        pass
+
+class BusquedaAlfabetica(EstrategiaBusqueda):
+    def buscar(self,items):
+        return sorted(items,key=lambda x:x.titulo)
+
+class BusquedaTemporal(EstrategiaBusqueda):
+    def buscar(self,items):
+        return sorted(items,key=lambda x:x.fecha_creacion,reverse=True)
+
+class BusquedaAleatoria(EstrategiaBusqueda):
+    def buscar(self,items):
+        return random.sample(items,len(items))
