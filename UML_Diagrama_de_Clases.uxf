@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>335</y>
+      <w>120</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Artista
+--
++nombre
++fecha_nacimiento
++canciones
+--
++atributos_medios() (@Property)
+bg=#d3d3d3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>510</y>
+      <w>150</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>Canción
+--
++id_cancion
++titulo
++fecha_creacion
++atributos_sonoros
++atributos_sentimentales
+--
+bg=#d3d3d3
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>545</x>
+      <y>340</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Playlist
+--
++ titulo: String
++ fecha_creacion: DateTime
++ canciones: List&lt;Cancion&gt;
+--
++ atributos_medios(): dict (@Property)
+bg=#d3d3d3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>150</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Catalogo
+--
++ canciones: List&lt;Cancion&gt;
++ artistas: List&lt;Artista&gt;
++ playlists: List&lt;Playlist&gt;
+--
++ buscar_cancion_por_id(id_cancion: int): Cancion
+bg=#d3d3d3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1255</x>
+      <y>315</y>
+      <w>145</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Recomendador ((R1)Singleton)
+--
+-instancia (estático) 
++catalogo
++sesion (Lista de Canciones)
+--
++obtenerRecomendador(catalogo)
++registrar_escucha(id)
+
+bg=#ffcccc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>530</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Handler ((R2) Chain of responsability
+--
++sucesor (puntero a otro Handler)
+--
++manejar(sesión)
++pasar(sesión)
+bg=#ccccff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1165</x>
+      <y>750</y>
+      <w>125</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>EstadisticoSonoro
+--
+
+--
++manejar(sesion)
+bg=#ccccff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>750</y>
+      <w>125</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>EstadisticoSentimental
+--
+
+--
++manejar(sesion)
+bg=#ccccff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1225</x>
+      <y>615</y>
+      <w>115</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+   
+   
+   
+   (Herencia)</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>615</y>
+      <w>100</w>
+      <h>145</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+   
+   
+   
+   (Herencia)</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>555</y>
+      <w>195</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>EstrategiaBusqueda ((R4)Strategy) @abstractmethod
+--
+
+--
++buscar(items) (Abstracto)
+bg=#ffffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>275</x>
+      <y>755</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>BusquedaAlfabetica
+--
+
+--
++buscar(items)
+bg=#ffffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>760</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>BusquedaTemporal
+--
+
+--
++buscar(items)
+bg=#ffffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>605</x>
+      <y>760</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>BusquedaAleatoria
+--
+
+--
++buscar(items)
+bg=#ffffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>325</x>
+      <y>605</y>
+      <w>160</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+   
+   
+   
+   (Herencia)</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>605</y>
+      <w>150</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+   
+   
+   
+   (Herencia)</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>605</y>
+      <w>55</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+   
+   
+   
+   (Herencia)</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>215</x>
+      <y>345</y>
+      <w>215</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>RecomendacionBase ((R3) Decorador)
+--
++ catalogo: Catalogo
++ sesion: list
++ estrategia: EstrategiaBusqueda (Relación con el patrón Strategy).
+--
++ recomendar(): dict
+bg=#ccffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>510</y>
+      <w>145</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>DecoratorRecomendacion
+--
+# recomendacion: RecomendacionBase
++ catalogo: Catalogo: 
++ sesion: list: 
++ estrategia: EstrategiaBusqueda
+--
++ recomendar(): dict
+bg=#ccffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>635</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>DecoratorArtista
+--
+
+--
++ recomendar(): dict
+bg=#ccffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>645</y>
+      <w>110</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>DecoratorPlaylist
+--
+
+--
++ recomendar(): dict
+bg=#ccffcc</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>145</x>
+      <y>580</y>
+      <w>110</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+
+
+(Herencia)</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>580</y>
+      <w>120</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+
+
+(Herencia)</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>405</y>
+      <w>175</w>
+      <h>115</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+m1= 0...n</panel_attributes>
+    <additional_attributes>10.0;210.0;330.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>215</y>
+      <w>60</w>
+      <h>305</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 0...n
+m1= 1
+    (Agregación)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;590.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>215</y>
+      <w>195</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+
+m2=0...n
+m1= 1
+
+(Agregación)</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>625</x>
+      <y>215</y>
+      <w>215</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 0...n
+m1= 1
+
+
+(Agregación)</panel_attributes>
+    <additional_attributes>410.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>405</y>
+      <w>145</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+
+m2=0...n
+m1= 1
+(Agregación)</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>625</x>
+      <y>405</y>
+      <w>160</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+   (Agregación)
+
+m2=0...n
+m1= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>945</x>
+      <y>225</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>
+bg=blue
+El recomendador "usa" el catálogo para buscar la música.
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>380</y>
+      <w>390</w>
+      <h>185</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+  
+  
+  (Asociacion)
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;350.0;760.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>925</x>
+      <y>185</y>
+      <w>340</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+  
+  
+  (Asociacion)
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;660.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>380</y>
+      <w>55</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+  
+  
+  (Asociacion)
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1255</x>
+      <y>430</y>
+      <w>180</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>Significado: El Recomendador inicia la cadena de 
+responsabilidad pasando la sesión al primer eslabón.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1380</x>
+      <y>505</y>
+      <w>115</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+  
+  
+  (sucesor)
+m1=0..1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;150.0;10.0;150.0;180.0;60.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1460</x>
+      <y>560</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>¿Para qué sirve en la práctica?
+En el código, esto permite que cuando el Recomendador llama a 
+EstadisticoSonoro, este haga sus cálculos y luego diga: "He 
+terminado, voy a ver si tengo un sucesor". Como le pusiste como 
+sucesor a EstadisticoSentimental, el paquete pasa al siguiente automáticamente.
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>335</x>
+      <y>405</y>
+      <w>175</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+    (Composición)
+
+m2=      1
+m1=    1</panel_attributes>
+    <additional_attributes>330.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>345</x>
+      <y>490</y>
+      <w>205</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Significado: La recomendación no existe sin una estrategia; la 
+estrategia es parte integral de su ciclo de vida.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>325</x>
+      <y>170</y>
+      <w>445</w>
+      <h>185</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+  
+  
+  (Asociacion)
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>870.0;20.0;10.0;20.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>255</x>
+      <y>240</y>
+      <w>175</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Significado: La recomendación necesita acceder al 
+catálogo para filtrar los resultados finales.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>115</x>
+      <y>445</y>
+      <w>210</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>Significado: El decorador envuelve un objeto base. Se usa rombo 
+vacío porque el objeto envuelto puede existir fuera del decorador.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
