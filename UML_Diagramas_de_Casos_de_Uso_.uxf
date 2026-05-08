@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>434</x>
+      <y>140</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>406</x>
+      <y>231</y>
+      <w>462</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Sirve para que la aplicación "aprenda" lo que te gusta cada vez que das a reproducir. El flujo es como
+una validación: tú eliges una canción y el sistema, antes de guardarla en tu historial, va al catálogo para
+confirmar que existe y obtener sus datos. Así se asegura de que tu perfil de usuario sea exacto.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>154</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>539</x>
+      <y>140</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Registrar Canción 
+en Sesión</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>91</y>
+      <w>112</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>665</x>
+      <y>63</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Buscar canción 
+en catalogo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>406</x>
+      <y>0</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Registrar Escucha</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>406</x>
+      <y>315</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Obtener una recomendación</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>441</x>
+      <y>413</y>
+      <w>49</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>546</x>
+      <y>427</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Solicitar 
+Recomendación</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>441</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>714</x>
+      <y>455</y>
+      <w>98</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Aplicar algoritmo 
+de Búsqueda</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>406</x>
+      <y>616</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Consultar Detalle de Canción.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>434</x>
+      <y>714</y>
+      <w>49</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>546</x>
+      <y>728</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Consultar Canción
+por ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>728</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>665</y>
+      <w>91</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extend&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;100.0;18.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>700</x>
+      <y>644</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Mostrar Error: Canción
+No Encontrada</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>406</x>
+      <y>847</y>
+      <w>476</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Permite ver la información completa de una pista mediante su ID. El flujo incluye una opción de extensión
+para mostrar un error solo si la canción no existe, sirviendo como un mecanismo de seguridad para que el
+usuario siempre sepa por qué no aparece un resultado.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>1141</y>
+      <w>147</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>399</x>
+      <y>1022</y>
+      <w>84</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Recomendador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>539</x>
+      <y>1029</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Analizar Perfil
+de Usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>1036</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>700</x>
+      <y>952</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Calcular Estadísticos 
+Sonoros</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>427</x>
+      <y>1155</y>
+      <w>434</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Sirve para que el sistema entienda tu perfil musical analizando lo que escuchas. El flujo incluye
+obligatoriamente el cálculo de datos sonoros y sentimentales, permitiendo que el recomendador 
+cree un resumen preciso de tus gustos para ofrecerte mejor música.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>973</y>
+      <w>98</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>1050</y>
+      <w>98</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>700</x>
+      <y>1078</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Calcular Estadísticos 
+Sentimentales</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>1463</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>399</x>
+      <y>1246</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Gestionar Contenido de Playlist (Relación agregación (Cancion -&gt; Playlist))</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>406</x>
+      <y>1344</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Usuario</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>539</x>
+      <y>1351</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Añadir Canción
+a Playlist</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>1358</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>714</x>
+      <y>1344</y>
+      <w>126</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Actualizar estadisticos
+de playlist</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>399</x>
+      <y>1477</y>
+      <w>469</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Esta acción permite al usuario añadir una canción a una lista, activando automáticamente el cálculo de
+los promedios sonoros del conjunto. En el diagrama de clases, esto se refleja en la relación de 
+agregación entre Playlist y Canción, donde la primera contiene una lista de objetos de la segunda.
+Al ejecutarse, se accede a la @property atributos_medios de la clase Playlist para actualizar su
+estado interno basado en los datos de cada canción agregada.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>623</x>
+      <y>1358</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>399</x>
+      <y>924</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Procesamiento de Estadísticas (Chain of Responsibility)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>399</x>
+      <y>1631</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Cargar catálogo musical</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>385</x>
+      <y>1722</y>
+      <w>84</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Recomendador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>497</x>
+      <y>1729</y>
+      <w>140</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Generar Catálogo Musical</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>1673</y>
+      <w>63</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1701</y>
+      <w>133</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1736</y>
+      <w>133</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>170.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1736</y>
+      <w>140</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>180.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>560</x>
+      <y>1652</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Generar Atributos</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>749</x>
+      <y>1694</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Crear Canciones</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>756</x>
+      <y>1743</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Crear Artistas</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>749</x>
+      <y>1799</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Crear Playlists</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>399</x>
+      <y>1862</y>
+      <w>469</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Caso de Uso: El administrador inicia el proceso de carga del catálogo del sistema.
+Esta operación permite disponer de un conjunto de canciones, artistas y playlists que serán utilizadas 
+posteriormente para la reproducción y recomendación musical.
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>1736</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>392</x>
+      <y>2051</y>
+      <w>77</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Recomendador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>525</x>
+      <y>1988</y>
+      <w>161</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Aplicar estrategia de búsqueda</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>518</x>
+      <y>2065</y>
+      <w>182</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Seleccionar Tipo de Recomendación</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>2016</y>
+      <w>63</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>2065</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>2058</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>2023</y>
+      <w>98</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>2072</y>
+      <w>98</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>120.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>399</x>
+      <y>1960</y>
+      <w>462</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Seleccionar tipo de recomendación</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>770</x>
+      <y>2016</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>fecha</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>777</x>
+      <y>2051</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>alfabético</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>777</x>
+      <y>2107</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>aleatorio</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>399</x>
+      <y>2191</y>
+      <w>469</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Caso de Uso: El usuario elige cómo quiere que se generen las recomendaciones (por fecha, 
+alfabéticamente o aleatoriamente).
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>427</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;27.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>406</x>
+      <y>546</y>
+      <w>462</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Sirve para que el sistema use lo que sabe de ti y te ofrezca música nueva sin que sea algo aleatorio.
+Cuando pides una sugerencia, el sistema activa obligatoriamente sus algoritmos de búsqueda. Es decir,
+pone en marcha su "motor de inteligencia" para filtrar entre miles de opciones y entregarte la canción
+ideal según tu estado de ánimo o historial.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>385</x>
+      <y>2366</y>
+      <w>77</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Recomendador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>679</x>
+      <y>2324</y>
+      <w>161</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Consultar Estadísticos</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>490</x>
+      <y>2380</y>
+      <w>182</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Obtener Recomendación por Similitud</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>2352</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>609</x>
+      <y>2856</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>2401</y>
+      <w>70</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;
+</panel_attributes>
+    <additional_attributes>30.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>385</x>
+      <y>2275</y>
+      <w>469</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Recomendar por Similitud Sonora</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>546</x>
+      <y>2464</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Calcular Distancia 
+Euclídea</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>385</x>
+      <y>2506</y>
+      <w>476</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Este caso de uso permite que el sistema recomiende música basándose en un análisis matemático
+de similitud sonora en lugar de usar solo etiquetas de texto. El proceso toma los valores medios de
+lo que has escuchado en tu sesión actual (ritmo, energía, etc.) y los compara con cada canción del
+catálogo mediante el cálculo de distancia euclidiana. De esta forma, el sistema identifica y selecciona
+la canción que "está más cerca" numéricamente de tus gustos recientes, asegurando que la
+recomendación sea realmente parecida a lo que estás oyendo.
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>371</x>
+      <y>2639</y>
+      <w>469</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>halign=left
+Buscar canción por ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>371</x>
+      <y>2870</y>
+      <w>469</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Caso de Uso: El usuario intenta reproducir o acceder a una canción indicando su ID.
+El sistema busca la canción en el catálogo y devuelve el resultado o un error si no existe.
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>2380</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;17.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>371</x>
+      <y>2730</y>
+      <w>77</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Recomendador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>511</x>
+      <y>2751</y>
+      <w>182</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Buscar canción por ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>511</x>
+      <y>2667</y>
+      <w>182</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Validar existencia de canción</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>518</x>
+      <y>2828</y>
+      <w>182</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Mostrar error canción no encontrada</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>581</x>
+      <y>2772</y>
+      <w>63</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;extend&gt;&gt;
+</panel_attributes>
+    <additional_attributes>20.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>581</x>
+      <y>2688</y>
+      <w>63</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>2751</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;17.0</additional_attributes>
+  </element>
+</diagram>
